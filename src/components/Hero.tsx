@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio';
-import ReactTyped from 'react-typed';
+import Typewriter from 'typewriter-effect';
 
 const Hero: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -82,20 +82,21 @@ const Hero: React.FC = () => {
 
           {/* Professional Title */}
           <motion.div variants={itemVariants} className="mb-8">
-            <div className="text-xl md:text-2xl text-silver-300 font-medium">
-              <ReactTyped
-                strings={[
-                  'Full Stack Software Engineer',
-                  '.NET Specialist',
-                  'Azure Cloud Developer',
-                  'Machine Learning Engineer',
-                  'Master\'s Student'
-                ]}
-                typeSpeed={70}
-                backSpeed={50}
-                backDelay={3000}
-                loop
-                className="text-gold-400"
+            <div className="text-xl md:text-2xl text-gold-400 font-medium min-h-[2.5rem] flex items-center justify-center">
+              <Typewriter
+                options={{
+                  strings: [
+                    'Full Stack Software Engineer',
+                    '.NET Specialist',
+                    'Azure Cloud Developer',
+                    'Machine Learning Engineer',
+                    'Master\'s Student'
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
               />
             </div>
           </motion.div>

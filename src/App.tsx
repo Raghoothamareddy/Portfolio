@@ -21,7 +21,7 @@ import { useScrollDirection } from '@/hooks/useScrollDirection';
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const scrollDirection = useScrollDirection();
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
@@ -31,13 +31,6 @@ function App() {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
     });
 
     function raf(time: number) {

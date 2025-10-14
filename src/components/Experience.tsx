@@ -77,7 +77,7 @@ const Experience: React.FC = () => {
             </motion.h3>
 
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {experiences.map((exp) => (
                 <motion.div
                   key={exp.id}
                   variants={itemVariants}
@@ -146,7 +146,7 @@ const Experience: React.FC = () => {
             </motion.h3>
 
             <div className="space-y-8">
-              {education.map((edu, index) => (
+              {education.map((edu) => (
                 <motion.div
                   key={edu.id}
                   variants={itemVariants}

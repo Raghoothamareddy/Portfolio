@@ -33,20 +33,24 @@ const Skills: React.FC = () => {
   };
 
   const skillCategories = {
-    frontend: skills.filter(skill => skill.category === 'frontend'),
-    backend: skills.filter(skill => skill.category === 'backend'),
+    programming: skills.filter(skill => skill.category === 'programming'),
+    framework: skills.filter(skill => skill.category === 'framework'),
+    ml: skills.filter(skill => skill.category === 'ml'),
     database: skills.filter(skill => skill.category === 'database'),
+    cloud: skills.filter(skill => skill.category === 'cloud'),
     tools: skills.filter(skill => skill.category === 'tools')
   };
 
   const categoryTitles = {
-    frontend: 'Frontend',
-    backend: 'Backend',
-    database: 'Database',
-    tools: 'Tools & Others'
+    programming: 'Programming Languages',
+    framework: 'Frameworks & Technologies',
+    ml: 'Machine Learning & AI',
+    database: 'Databases',
+    cloud: 'Cloud & DevOps',
+    tools: 'Developer Tools'
   };
 
-  const getSkillIcon = (iconName: string) => {
+  const getSkillIcon = () => {
     // In a real project, you'd use actual icon components or SVGs
     return `🚀`; // Placeholder
   };
@@ -100,7 +104,7 @@ const Skills: React.FC = () => {
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
-                        <span className="text-2xl">{getSkillIcon(skill.icon)}</span>
+                        <span className="text-2xl">{getSkillIcon()}</span>
                         <span className="font-medium text-white">{skill.name}</span>
                       </div>
                       <span className="text-primary-400 font-semibold">

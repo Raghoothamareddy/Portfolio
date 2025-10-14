@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Lenis from 'lenis';
 
 // Components
 import Navbar from '@/components/Navbar';
@@ -27,19 +26,6 @@ function App() {
   });
 
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -47,7 +33,6 @@ function App() {
 
     return () => {
       clearTimeout(timer);
-      lenis.destroy();
     };
   }, []);
 

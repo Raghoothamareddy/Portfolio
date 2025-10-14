@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio';
 
 const Contact: React.FC = () => {
@@ -87,8 +87,7 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     { icon: FaGithub, href: personalInfo.contact.github, label: 'GitHub' },
-    { icon: FaLinkedin, href: personalInfo.contact.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, href: personalInfo.contact.twitter, label: 'Twitter' }
+    { icon: FaLinkedin, href: personalInfo.contact.linkedin, label: 'LinkedIn' }
   ];
 
   return (

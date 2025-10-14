@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio';
 
 const Footer: React.FC = () => {
@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: FaGithub, href: personalInfo.contact.github, label: 'GitHub' },
     { icon: FaLinkedin, href: personalInfo.contact.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, href: personalInfo.contact.twitter, label: 'Twitter' },
     { icon: FaEnvelope, href: `mailto:${personalInfo.contact.email}`, label: 'Email' }
   ];
 
@@ -140,11 +139,7 @@ const Footer: React.FC = () => {
             <p className="text-secondary-400 text-sm">
               © {currentYear} {personalInfo.name}. All rights reserved.
             </p>
-            <p className="text-secondary-400 text-sm flex items-center space-x-1">
-              <span>Made with</span>
-              <FaHeart className="w-4 h-4 text-red-500" />
-              <span>using React & TypeScript</span>
-            </p>
+          
           </div>
         </motion.div>
       </div>

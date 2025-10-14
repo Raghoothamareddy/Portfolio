@@ -161,19 +161,7 @@ const Projects: React.FC = () => {
                       </motion.a>
                     )}
                     
-                    {project.liveUrl && (
-                      <motion.a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center space-x-2 bg-primary-600 hover:bg-primary-500 text-white px-4 py-2 rounded-lg transition-all duration-300"
-                      >
-                        <FaExternalLinkAlt className="w-4 h-4" />
-                        <span>Live Demo</span>
-                      </motion.a>
-                    )}
+                  
                   </div>
                 </div>
               </motion.div>

@@ -9,7 +9,6 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -64,7 +63,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900">
+    <div className="min-h-screen bg-black">
       <AnimatePresence mode="wait">
         <motion.div
           key="main-content"
@@ -76,8 +75,8 @@ function App() {
         >
           {/* Background Effects */}
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-silver-500/5 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-silver-400/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
           </div>
 
           {/* Navigation */}
@@ -121,10 +120,7 @@ function App() {
               <Experience />
             </motion.section>
 
-            {/* Contact Section */}
-            <motion.section variants={itemVariants}>
-              <Contact />
-            </motion.section>
+          
           </motion.main>
 
           {/* Footer */}

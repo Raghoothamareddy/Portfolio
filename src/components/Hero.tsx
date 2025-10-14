@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio';
 import Typewriter from 'typewriter-effect';
 
@@ -38,14 +38,13 @@ const Hero: React.FC = () => {
   const socialLinks = [
     { icon: FaGithub, href: personalInfo.contact.github, label: 'GitHub' },
     { icon: FaLinkedin, href: personalInfo.contact.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, href: personalInfo.contact.twitter, label: 'Twitter' },
     { icon: FaEnvelope, href: `mailto:${personalInfo.contact.email}`, label: 'Email' }
   ];
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative hero-section">
       {/* Clean Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800" />
+      <div className="absolute inset-0 bg-dark-950" />
       
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-5">

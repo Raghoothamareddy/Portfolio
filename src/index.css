@@ -10,9 +10,10 @@
   }
   
   body {
-    @apply bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 text-white font-sans;
+    @apply bg-black text-silver-200 font-sans;
     overflow-x: hidden;
     background-attachment: fixed;
+    background-color: #000000;
   }
   
   * {
@@ -33,11 +34,11 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-silver-300 via-silver-400 to-silver-500 bg-clip-text text-transparent;
   }
   
   .gradient-text-silver {
-    @apply bg-gradient-to-r from-silver-300 via-silver-400 to-silver-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-silver-200 via-silver-300 to-silver-400 bg-clip-text text-transparent;
   }
   
   .glass-effect {
@@ -46,38 +47,27 @@
   }
   
   .frost-glass {
-    @apply bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl border border-gold-500/20;
+    @apply bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl border border-silver-500/20;
     box-shadow: 
       0 8px 32px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.1),
       inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
   
-  .gold-glass {
-    @apply bg-gradient-to-br from-gold-500/10 via-gold-400/5 to-transparent backdrop-blur-xl border border-gold-400/30;
-    box-shadow: 
-      0 8px 32px rgba(234, 179, 8, 0.1),
-      inset 0 1px 0 rgba(234, 179, 8, 0.2),
-      0 0 20px rgba(234, 179, 8, 0.1);
-  }
-  
   .silver-glass {
-    @apply bg-gradient-to-br from-silver-400/10 via-silver-300/5 to-transparent backdrop-blur-xl border border-silver-400/20;
+    @apply bg-gradient-to-br from-silver-400/10 via-silver-300/5 to-transparent backdrop-blur-xl border border-silver-400/30;
     box-shadow: 
       0 8px 32px rgba(156, 163, 175, 0.1),
-      inset 0 1px 0 rgba(156, 163, 175, 0.2);
+      inset 0 1px 0 rgba(156, 163, 175, 0.2),
+      0 0 20px rgba(156, 163, 175, 0.1);
   }
   
   .card-hover {
-    @apply transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-gold-500/20 hover:border-gold-400/50;
+    @apply transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-silver-500/20 hover:border-silver-400/50;
   }
   
   .frost-card {
-    @apply frost-glass rounded-2xl p-6 transition-all duration-500 hover:scale-105 hover:shadow-gold-500/20;
-  }
-  
-  .gold-card {
-    @apply gold-glass rounded-2xl p-6 transition-all duration-500 hover:scale-105 hover:shadow-gold-500/30;
+    @apply frost-glass rounded-2xl p-6 transition-all duration-500 hover:scale-105 hover:shadow-silver-500/20;
   }
   
   .silver-card {
@@ -93,7 +83,7 @@
   }
   
   .frost-button {
-    @apply relative overflow-hidden bg-gradient-to-r from-gold-500 to-gold-600 text-dark-900 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-gold-500/50;
+    @apply relative overflow-hidden bg-gradient-to-r from-silver-500 to-silver-600 text-black font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-silver-500/50;
   }
   
   .frost-button::before {
@@ -108,7 +98,7 @@
   }
   
   .glass-button {
-    @apply glass-effect text-gold-400 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:bg-gold-500/10 hover:text-gold-300 hover:border-gold-400/50;
+    @apply glass-effect text-silver-400 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:bg-silver-500/10 hover:text-silver-300 hover:border-silver-400/50;
   }
   
   .shimmer-effect {
@@ -117,7 +107,7 @@
   
   .shimmer-effect::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-silver-400/20 to-transparent;
     transform: translateX(-100%);
     animation: shimmer 2s infinite;
   }
@@ -143,17 +133,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-900/50 backdrop-blur-sm;
+  @apply bg-black/50 backdrop-blur-sm;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-gold-500 to-gold-600 rounded-full;
-  box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+  @apply bg-gradient-to-b from-silver-500 to-silver-600 rounded-full;
+  box-shadow: 0 0 10px rgba(156, 163, 175, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gradient-to-b from-gold-400 to-gold-500;
-  box-shadow: 0 0 15px rgba(234, 179, 8, 0.5);
+  @apply bg-gradient-to-b from-silver-400 to-silver-500;
+  box-shadow: 0 0 15px rgba(156, 163, 175, 0.5);
 }
 
 /* Loading animation */
@@ -170,8 +160,8 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #fbbf24, #f59e0b);
-  box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+  background: linear-gradient(45deg, #cbd5e1, #94a3b8);
+  box-shadow: 0 0 10px rgba(156, 163, 175, 0.5);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 

@@ -5,14 +5,14 @@ export const personalInfo: PersonalInfo = {
   title: "Full Stack Software Engineer & .NET Specialist",
   bio: "Master of Science in Computer Science candidate with 2.5+ years of professional experience in full-stack software engineering using the .NET framework. Proven ability in developing, modernizing, and deploying cloud-native applications on Microsoft Azure. Specialized in C#, .NET MAUI, machine learning, and enterprise application development.",
   avatar: "/avatar.jpg",
-  resumeUrl: "/My_Resume_Raghoothama Reddy p.pdf",
+  resumeUrl: "/RaghoothamaReddyKaliki_Resume.pdf",
   contact: {
     email: "raghoothamakaliki@gmail.com",
     phone: "+1 (203) 666-0811",
     location: "Bridgeport, Connecticut, 06604",
-    linkedin: "https://linkedin.com/in/raghoothama-reddy-kaliki",
-    github: "https://github.com/raghoothama-reddy-kaliki",
-    website: "yourwebsite.com"
+    linkedin: "https://www.linkedin.com/in/raghoothama-reddy-kaliki-aa2292208/",
+    github: "https://github.com/Raghoothamareddy",
+    website: "/"
   }
 };
 

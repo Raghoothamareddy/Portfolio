@@ -127,13 +127,14 @@ const Hero: React.FC = () => {
             
             <motion.a
               href={personalInfo.resumeUrl}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group relative"
             >
               <div className="bg-gradient-to-r from-gold-500 to-gold-600 text-dark-900 font-semibold px-8 py-4 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-gold-500/50">
-                Download Resume
+                View Resume
               </div>
             </motion.a>
           </motion.div>

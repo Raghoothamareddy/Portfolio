@@ -140,11 +140,12 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants}>
               <a
                 href={personalInfo.resumeUrl}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="frost-button inline-flex items-center space-x-2 group"
               >
                 <span>📄</span>
-                <span>Download Resume</span>
+                <span>View Resume</span>
               </a>
             </motion.div>
           </motion.div>

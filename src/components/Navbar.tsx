@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes, FaDownload } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio';
 
 interface NavbarProps {
@@ -108,15 +108,16 @@ const Navbar: React.FC<NavbarProps> = ({ scrollDirection }) => {
               </Link>
             ))}
             
-            {/* Resume Download */}
+            {/* Resume View */}
             <motion.a
               href={personalInfo.resumeUrl}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="frost-button flex items-center space-x-2 text-sm"
             >
-              <FaDownload className="w-4 h-4" />
+              <span className="w-4 h-4">📄</span>
               <span>Resume</span>
             </motion.a>
           </div>
@@ -157,17 +158,18 @@ const Navbar: React.FC<NavbarProps> = ({ scrollDirection }) => {
                   </Link>
                 ))}
                 
-                {/* Mobile Resume Download */}
+                {/* Mobile Resume View */}
                 <motion.a
                   href={personalInfo.resumeUrl}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setIsOpen(false)}
                   className="frost-button flex items-center justify-center space-x-2 mt-6"
                 >
-                  <FaDownload className="w-4 h-4" />
-                  <span>Download Resume</span>
+                  <span className="w-4 h-4">📄</span>
+                  <span>View Resume</span>
                 </motion.a>
               </div>
             </motion.div>
